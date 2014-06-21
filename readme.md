@@ -1,6 +1,6 @@
 # jdlestrap
 
-Bootstrap 3 Official + Jade template w/ Gulpjs.
+Modified Bootstrap 3 Official + Jade template w/ Gulpjs.
 
 ## Requirement
 
