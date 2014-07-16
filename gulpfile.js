@@ -1,5 +1,8 @@
 var gulp = require('gulp'),
-  $ = require('gulp-load-plugins')(),
+  $ = require('gulp-load-plugins')({
+    pattern: ['gulp-*', 'gulp.*'],
+    replaceString: /\bgulp[\-.]/
+  }),
   browserSync = require('browser-sync');
 
 gulp.task('bs', function() {
@@ -8,7 +11,7 @@ gulp.task('bs', function() {
       baseDir: "./dist"
     },
     notify: false,
-    xip: true
+    xip: false
   });
 });
 
@@ -16,9 +19,9 @@ gulp.task('jade', function() {
   gulp.src('src/templates/*.jade')
     .pipe($.jade())
     .pipe(gulp.dest('dist'))
-  // If you need prettify HTML, uncomment below 2 lines.
-  // .pipe($.prettify())
-  // .pipe(gulp.dest('dist'))
+//  If you need prettify HTML, uncomment below 2 lines.
+//  .pipe($.prettify())
+//  .pipe(gulp.dest('dist'))
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -26,9 +29,9 @@ gulp.task('jade', function() {
 
 gulp.task('styles', function() {
   gulp.src('src/css/bootstrap.less')
-    .pipe($.less({
-      sourceMap: true
-    }))
+    .pipe($.sourcemaps.init())
+    .pipe($.less())
+    .pipe($.sourcemaps.write())
     .pipe(gulp.dest('dist/css'))
     .pipe($.rename({
       suffix: '.min'

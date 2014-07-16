@@ -1,10 +1,10 @@
 {
   "name": "jdlestrap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "cipher <gmgateway@gmail.com>"
   ],
-  "description": "Bootstrap 3 + Jade template with gulpjs.",
+  "description": "Modified Bootstrap 3 Official + Jade template w/ Gulpjs.",
   "license": "MIT",
   "ignore": [
     "**/.*",
