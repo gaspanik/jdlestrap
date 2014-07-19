@@ -1,11 +1,12 @@
 {
   "name": "jdlestrap",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Modified Bootstrap 3 Official + Jade template w/ Gulpjs.",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
     "postinstall": "bower install && make init",
+    "concat": "gulp scripts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Masaaki Komori",
@@ -13,13 +14,16 @@
   "devDependencies": {
     "browser-sync": "*",
     "gulp": "*",
+    "gulp-concat": "*",
     "gulp-csso": "*",
     "gulp-jade": "*",
     "gulp-less": "*",
     "gulp-load-plugins": "*",
     "gulp-prettify": "*",
     "gulp-rename": "*",
+    "gulp-shell": "*",
     "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
     "marked": "*"
   }
 }

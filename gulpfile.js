@@ -19,9 +19,9 @@ gulp.task('jade', function() {
   gulp.src('src/templates/*.jade')
     .pipe($.jade())
     .pipe(gulp.dest('dist'))
-//  If you need prettify HTML, uncomment below 2 lines.
-//  .pipe($.prettify())
-//  .pipe(gulp.dest('dist'))
+    //  If you need prettify HTML, uncomment below 2 lines.
+    //  .pipe($.prettify())
+    //  .pipe(gulp.dest('dist'))
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -42,6 +42,33 @@ gulp.task('styles', function() {
       stream: true,
       once: true
     }));
+});
+
+
+//  If you would like to customize bootstrap script, run 'npm run-script concat'.
+gulp.task('scripts', function() {
+  return gulp.src([
+      'src/js/transition.js',
+      'src/js/alert.js',
+      'src/js/button.js',
+      'src/js/carousel.js',
+      'src/js/collapse.js',
+      'src/js/dropdown.js',
+      'src/js/modal.js',
+      'src/js/tooltip.js',
+      'src/js/popover.js',
+      'src/js/scrollspy.js',
+      'src/js/tab.js',
+      'src/js/affix.js'
+    ])
+    //  .pipe($.sourcemaps.init())
+    .pipe($.uglify())
+    .pipe($.concat('bootstrap.tmp.js'))
+    //  .pipe($.sourcemaps.write())
+    .pipe(gulp.dest('src/js'))
+    .pipe($.shell([
+      'cat src/license.txt src/js/bootstrap.tmp.js > dist/js/bootstrap.min.js'
+    ]));
 });
 
 gulp.task('watch', function() {
