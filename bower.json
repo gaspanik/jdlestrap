@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "jquery": "*",
-    "holderjs": "",
+    "holderjs": "https://github.com/imsky/holder/archive/master.zip",
     "jbootstrap": "https://github.com/gaspanik/jbootstrap/archive/master.zip",
     "bootstrap-accessibility-plugin": "https://github.com/paypal/bootstrap-accessibility-plugin/archive/master.zip"
   }
