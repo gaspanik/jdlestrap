@@ -21,6 +21,7 @@ Browser-Sync detect local file changes.
 ## Changelog
 
 Ver. 0.0.4: Add about.jade
+
 ---
 
 MIT
