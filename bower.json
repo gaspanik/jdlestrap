@@ -1,6 +1,6 @@
 {
   "name": "jdlestrap",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "authors": [
     "cipher <gmgateway@gmail.com>"
   ],
@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "jquery": "*",
+    "holderjs": "",
     "jbootstrap": "https://github.com/gaspanik/jbootstrap/archive/master.zip",
     "bootstrap-accessibility-plugin": "https://github.com/paypal/bootstrap-accessibility-plugin/archive/master.zip"
   }
