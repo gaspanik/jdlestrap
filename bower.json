@@ -17,7 +17,7 @@
   "dependencies": {
     "jquery": "*",
     "bootstrap-autohidingnavbar": "*",
-    "bootstrap-accessibility-plugin": "*",
+    "bootstrap-accessibility-plugin": "https://github.com/paypal/bootstrap-accessibility-plugin/archive/master.zip",
     "holderjs": "*",
     "jbootstrap": "https://github.com/gaspanik/jbootstrap/archive/master.zip"
   }
