@@ -1,6 +1,6 @@
 {
   "name": "jdlestrap",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "authors": [
     "cipher <gmgateway@gmail.com>"
   ],
@@ -16,8 +16,9 @@
   ],
   "dependencies": {
     "jquery": "*",
-    "holderjs": "https://github.com/imsky/holder/archive/master.zip",
-    "jbootstrap": "https://github.com/gaspanik/jbootstrap/archive/master.zip",
-    "bootstrap-accessibility-plugin": "https://github.com/paypal/bootstrap-accessibility-plugin/archive/master.zip"
+    "bootstrap-autohidingnavbar": "*",
+    "bootstrap-accessibility-plugin": "*",
+    "holderjs": "*",
+    "jbootstrap": "https://github.com/gaspanik/jbootstrap/archive/master.zip"
   }
 }

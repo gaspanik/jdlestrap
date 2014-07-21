@@ -20,7 +20,7 @@ Browser-Sync detect local file changes.
 
 ## Changelog
 
-Ver. 0.0.5: Support placeholder images w/ holder.js
+Ver. 0.0.6: Add navbar autohide function w/ bootstrap-autohidingnavbar.
 
 ---
 

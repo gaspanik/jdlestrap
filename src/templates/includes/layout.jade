@@ -5,8 +5,10 @@ head
 	title jdlestrap
 	link(rel="stylesheet", href="css/bootstrap.css")
 	link(rel="stylesheet", href="css/bootstrap-accessibility.css")
+	style.
+		body {margin-top:64px}
 body
-	nav(role="navigation").navbar.navbar-default
+	nav(role="navigation").navbar.navbar-default.navbar-fixed-top
 		.container
 			.navbar-header
 				button(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse").navbar-toggle
@@ -38,4 +40,10 @@ body
 script(src='js/jquery.min.js')
 script(src='js/bootstrap.min.js')
 script(src='js/bootstrap-accessibility.min.js')
+//	script(src='js/jquery.bootstrap-autohidingnavbar.min.js')
 script(src='js/holder.js')
+
+// script.
+// 	$('.navbar-fixed-top').autoHidingNavbar({
+// 		"animationDuration": 400
+// 	});
