@@ -18,10 +18,13 @@ gulp.task('bs', function() {
 
 gulp.task('ngrok', function() {
   ngrok.connect(3000, function(err, url) {
-    console.log('we got a tunnel', url);
+    if (err) {
+      throw new Error(err);
+    } else {
+      console.log('we got a tunnel', url);
+    }
   });
 });
-
 
 gulp.task('jade', function() {
   gulp.src('src/templates/*.jade')
