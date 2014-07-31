@@ -20,7 +20,7 @@ Browser-Sync detect local file changes.
 
 ## Changelog
 
-Ver. 0.0.6: Add navbar autohide function w/ bootstrap-autohidingnavbar.
+Ver. 0.0.7: Add tunnel option w/ ngrok.
 
 ---
 

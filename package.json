@@ -1,6 +1,6 @@
 {
   "name": "jdlestrap",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Modified Bootstrap 3 Official + Jade template w/ Gulpjs.",
   "main": "gulpfile.js",
   "scripts": {
@@ -12,6 +12,7 @@
   "author": "Masaaki Komori",
   "license": "MIT",
   "devDependencies": {
+    "ngrok": "*",
     "browser-sync": "*",
     "gulp-concat": "*",
     "gulp-csso": "*",

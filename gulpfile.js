@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     pattern: ['gulp-*', 'gulp.*'],
     replaceString: /\bgulp[\-.]/
   }),
+  ngrok = require('ngrok'),
   browserSync = require('browser-sync');
 
 gulp.task('bs', function() {
@@ -14,6 +15,14 @@ gulp.task('bs', function() {
     xip: false
   });
 });
+
+gulp.task('ngrok', function() {
+  ngrok.once('connect', function(url) {
+    console.log('we got a tunnel', url);
+  });
+  ngrok.connect(3000);
+});
+
 
 gulp.task('jade', function() {
   gulp.src('src/templates/*.jade')
@@ -75,5 +84,7 @@ gulp.task('watch', function() {
   gulp.watch(['src/css/**'], ['styles']);
   gulp.watch(['src/templates/**'], ['jade']);
 });
+
+// If you would like to open tunnel w/ ngrok, add 'ngrok' task into default task list.
 
 gulp.task('default', ['bs', 'styles', 'jade', 'watch']);
