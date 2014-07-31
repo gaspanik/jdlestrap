@@ -17,10 +17,9 @@ gulp.task('bs', function() {
 });
 
 gulp.task('ngrok', function() {
-  ngrok.once('connect', function(url) {
+  ngrok.connect(3000, function(err, url) {
     console.log('we got a tunnel', url);
   });
-  ngrok.connect(3000);
 });
 
 
@@ -39,7 +38,7 @@ gulp.task('jade', function() {
 gulp.task('styles', function() {
   gulp.src('src/css/bootstrap.less')
     .pipe($.sourcemaps.init())
-    .pipe($.less())
+      .pipe($.less())
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('dist/css'))
     .pipe($.rename({
@@ -86,5 +85,6 @@ gulp.task('watch', function() {
 });
 
 // If you would like to open tunnel w/ ngrok, add 'ngrok' task into default task list.
+// More info. https://ngrok.com/ | https://github.com/bubenshchykov/ngrok
 
 gulp.task('default', ['bs', 'styles', 'jade', 'watch']);
