@@ -20,7 +20,7 @@ Browser-Sync detect local file changes.
 
 ## Changelog
 
-Ver. 0.0.7: Add tunnel option w/ ngrok.
+Ver. 0.0.8: Update Bootstrap
 
 ---
 

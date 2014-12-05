@@ -1,6 +1,6 @@
 {
   "name": "jdlestrap",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "authors": [
     "cipher <gmgateway@gmail.com>"
   ],
@@ -19,6 +19,6 @@
     "bootstrap-autohidingnavbar": "*",
     "bootstrap-accessibility-plugin": "https://github.com/paypal/bootstrap-accessibility-plugin/archive/master.zip",
     "holderjs": "*",
-    "jbootstrap": "https://github.com/gaspanik/jbootstrap/archive/master.zip"
+    "bootstrap3-mod": "https://github.com/gaspanik/bootstrap3-mod/archive/modified.zip"
   }
 }
