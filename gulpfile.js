@@ -1,17 +1,17 @@
-var gulp = require('gulp'),
-  $ = require('gulp-load-plugins')({
+var gulp = require('gulp');
+var $ = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp.*'],
     replaceString: /\bgulp[\-.]/
-  }),
-  ngrok = require('ngrok'),
-  browserSync = require('browser-sync');
+  });
+var ngrok = require('ngrok');
+var browserSync = require('browser-sync');
 
 gulp.task('bs', function() {
-  browserSync.init(null, {
+  browserSync.init({
     server: {
       baseDir: "./dist"
     },
-    notify: false,
+    notify: true,
     xip: false
   });
 });
